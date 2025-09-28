@@ -1,16 +1,16 @@
-###Environment
+### Environment
 I wanted to setup something simple and self-contained with some unit tests to look at different cases, so I chose a minimal Typescript project with jest unit tests.
 
-###Setup
+### Setup
 npm i
 
-###Run
+### Run
 npm test
 
-###Solution
+### Solution
 After a couple initial attempts, I realized the graph could be expressed as an n-ary tree where I didn't need to worry that the DAG I'm given would have any loops or cycles. This simplified the problem quite a bit and once I began to think of it in terms of a tree, some of the basic algorithms of tree traversal seemed like the way to go. Breadth first search was the first one I thought of and tried, but didn't really make sense when applied to a longest path problem. Depth-first search on the other hand made more sense.
 
-###Questions
+### Questions
 1. Does the solution work for larger graphs?
 I thought it might, but after reading around a bit.. for much larger graphs this type of DFS has time complexity that can grow exponentially if the number of paths is large enough.
 
